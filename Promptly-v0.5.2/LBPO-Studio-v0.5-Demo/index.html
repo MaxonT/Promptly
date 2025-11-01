@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Promptly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/favicon.svg">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="nav">
+    <div class="logo"><img src="assets/logo.svg" alt="logo"><span class="fxg" data-i18n="appTitle">Promptly</span><span class="badge">v0.5.2 </span></div>
+    <div class="menu">
+      <a href="index.html" data-i18n="dashboard">Dashboard</a>
+      <a href="subscription.html" data-i18n="subscription">Subscription</a>
+      <a href="terms.html" data-i18n="legal_terms">Terms</a>
+      <a href="privacy.html" data-i18n="legal_privacy">Privacy</a>
+      <a href="cookies.html" data-i18n="legal_cookies">Cookies</a>
+      <select id="themeSel">
+        <option value="system" data-i18n="system">System</option>
+        <option value="light" data-i18n="light">Light</option>
+        <option value="dark" data-i18n="dark">Dark</option>
+      </select>
+      <select id="langSel">
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ar">العربية</option>
+        <option value="pt">Português</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+      </select>
+      <span id="planSlot" class="badge"></span>
+      <span id="userSlot"></span>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card pad">
+      <h3 data-i18n="task">Task</h3>
+      <textarea id="task" rows="5" placeholder="e.g., Classify sentiment of a sentence; output POS or NEG only."></textarea>
+      <h3 style="margin-top:12px" data-i18n="examples">Examples (optional)</h3>
+      <textarea id="examples" rows="4" placeholder="POS || I love this!&#10;NEG || This is terrible."></textarea>
+      <div style="display:flex;gap:10px;margin-top:12px">
+        <button id="run" data-i18n="run">Run Optimization</button>
+      </div>
+    </div>
+    <div class="card pad">
+      <h3 data-i18n="best">Best Prompt</h3>
+      <textarea id="best" rows="12" readonly></textarea>
+    </div>
+  </div>
+
+  <div class="kpis" style="margin-top:16px">
+    <div class="kpi"><div data-i18n="accuracy">Accuracy</div><div class="v" id="acc">—</div></div>
+    <div class="kpi"><div data-i18n="f1">F1</div><div class="v" id="f1">—</div></div>
+    <div class="kpi"><div data-i18n="pass">Pass Rate</div><div class="v" id="pass">—</div></div>
+    <div class="kpi"><div data-i18n="cost">Token Cost ↓</div><div class="v" id="cost">—</div></div>
+    <div class="kpi"><div data-i18n="progress">Progress %</div><div class="v" id="prog">—</div></div>
+  </div>
+
+  <div class="grid2" style="margin-top:16px">
+    <div class="card pad"><h3 data-i18n="growth">Growth Over Iterations</h3><canvas id="line" height="160"></canvas></div>
+    <div class="card pad"><h3 data-i18n="changes">Change Contribution</h3><canvas id="bar" height="160"></canvas></div>
+  </div>
+
+  <div class="grid3" style="margin-top:16px">
+    <div class="card pad"><h3 data-i18n="passfail">Pass vs Fail (%)</h3><canvas id="pie" height="140"></canvas></div>
+    <div class="card pad"><h3 data-i18n="meter">Progress Meter (%)</h3><canvas id="gauge" height="140"></canvas></div>
+    <div class="card pad"><h3 data-i18n="versions">Prompt Versions</h3><div id="versions" style="white-space:pre-wrap;font-size:12px;color:#9fb0ff"></div></div>
+  </div>
+
+  <div class="footer">© Promptly v0.5.2 · Demo · No trackers. Preferences saved only after consent. · Support: ming.t.yang@vanderbilt.edu</div>
+</div>
+
+<div id="cookieBanner" class="banner" style="display:none">
+  <div class="card pad content">
+    <div data-i18n="cookieMsg">We use cookies...</div>
+    <div style="display:flex;gap:8px">
+      <button id="acceptCookies" data-i18n="accept">Accept</button>
+      <button id="rejectCookies" data-i18n="reject">Reject</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/app.js"></script>
+<script>
+  // Apply brand colors
+  document.documentElement.style.setProperty('--override-primary','{{BRAND_PRIMARY}}');
+  document.documentElement.style.setProperty('--override-secondary','{{BRAND_SECONDARY}}');
+</script>
+</body>
+</html>

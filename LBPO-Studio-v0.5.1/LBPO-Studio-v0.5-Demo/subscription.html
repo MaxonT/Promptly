@@ -1,0 +1,43 @@
+<!doctype html><html><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscription · {{PRODUCT_NAME}}</title>
+<link rel="stylesheet" href="assets/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head><body>
+<div class="wrap">
+  <div class="nav"><div class="logo"><img src="assets/logo.svg" alt=""><b>{{PRODUCT_NAME}}</b></div><a href="index.html">← Back</a></div>
+  <div class="grid2">
+    <div class="card pad">
+      <h3 data-i18n="free">Free</h3>
+      <ul>
+        <li>Use dashboard & charts</li>
+        <li>Local simulation</li>
+      </ul>
+      <div><b data-i18n="currentPlan">Current plan</b>: <span id="freeFlag">—</span></div>
+    </div>
+    <div class="card pad">
+      <h3 data-i18n="plus">Plus (Unlimited ${{SUBSCRIPTION_PRICE}}/mo)</h3>
+      <ul>
+        <li>Advanced presets & templates</li>
+        <li>Batch optimization flows</li>
+      </ul>
+      <div><b data-i18n="currentPlan">Current plan</b>: <span id="plusFlag">—</span></div>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <button onclick="Sub.upgrade()" data-i18n="upgrade">Upgrade</button>
+        <button onclick="Sub.cancel()" data-i18n="cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/i18n.js"></script><script src="assets/app.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded',()=>{
+  const f=document.getElementById('freeFlag'); const p=document.getElementById('plusFlag');
+  function sync(){
+    f.textContent = (Sub.plan.name==='Free')?'✓':'—';
+    p.textContent = (Sub.plan.name.startsWith('Plus'))?'✓':'—';
+  }
+  sync(); const _u=Sub.upgrade; Sub.upgrade=()=>{_u.call(Sub); sync();}; const _c=Sub.cancel; Sub.cancel=()=>{_c.call(Sub); sync();};
+});
+</script>
+</body></html>

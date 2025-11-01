@@ -1,0 +1,36 @@
+/* LBPO-Studio v0.5 styles (brand/tokens) */
+:root{
+  --brand-primary: var(--override-primary, {{BRAND_PRIMARY}});
+  --brand-secondary: var(--override-secondary, {{BRAND_SECONDARY}});
+  --bg:#0b1020; --panel:#111831; --card:#0f1530; --text:#e7ecff; --muted:#9fb0ff;
+  --ok:#22c55e; --warn:#f59e0b; --danger:#ef4444;
+}
+@media (prefers-color-scheme: light){
+  :root{ --bg:#f6f7fb; --panel:#ffffff; --card:#ffffff; --text:#0b1020; --muted:#5161a8; }
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--text)}
+.wrap{max-width:1200px;margin:0 auto;padding:24px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800}
+.logo img{height:28px}
+.badge{padding:4px 10px;border-radius:999px;border:1px solid #2a3a7a;background:#0d1440;color:#a6b7ff}
+.card{background:linear-gradient(180deg,var(--card),rgba(0,0,0,0) 120%);border:1px solid #24306333;border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+.pad{padding:18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+input,textarea,select,button{border-radius:12px;border:1px solid #24306333;background:#0b1233;color:#e7ecff;padding:10px;width:100%}
+button{cursor:pointer;background:linear-gradient(180deg,var(--brand-primary),var(--brand-secondary));font-weight:800;color:#fff;border:0}
+.light input,.light textarea,.light select{background:#fff;color:#0b1020;border:1px solid #c4d0ff}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.kpi{border-radius:16px;border:1px solid #27316733;background:#0c133322;padding:14px}
+.kpi .v{font-size:26px;font-weight:800}
+.footer{margin:20px 0;color:#aab7ff99;text-align:center;font-size:12px}
+.banner{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);max-width:720px;width:90%;z-index:999}
+.banner .content{display:flex;gap:12px;align-items:center;justify-content:space-between}
+a{color:var(--brand-secondary);text-decoration:none}
+a:hover{text-decoration:underline}
+.menu{display:flex;gap:10px;align-items:center}
+.menu a{padding:6px 10px;border-radius:10px}
+hr{border:none;border-top:1px solid #2a3a7a22;margin:12px 0}
+@media (max-width: 880px){ .grid2{grid-template-columns:1fr} .grid3{grid-template-columns:1fr} }

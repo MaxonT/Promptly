@@ -1,0 +1,20 @@
+<!doctype html><html><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signup · {{PRODUCT_NAME}}</title>
+<link rel="stylesheet" href="assets/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head><body>
+<div class="wrap">
+  <div class="nav"><div class="logo"><img src="assets/logo.svg" alt=""><b>{{PRODUCT_NAME}}</b></div><a href="index.html">← Back</a></div>
+  <div class="card pad" style="max-width:520px;margin:0 auto">
+    <h2 data-i18n="signup">Sign up</h2>
+    <form onsubmit="event.preventDefault(); Auth.signup(name.value, email.value); location.href='index.html'">
+      <label data-i18n="name">Name</label><input id="name" required>
+      <label data-i18n="email">Email</label><input id="email" required type="email">
+      <label data-i18n="password">Password</label><input id="password" required type="password">
+      <div style="height:12px"></div><button data-i18n="submit">Submit</button>
+    </form>
+  </div>
+</div>
+<script src="assets/i18n.js"></script><script src="assets/app.js"></script>
+</body></html>
