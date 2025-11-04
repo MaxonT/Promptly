@@ -137,14 +137,14 @@ VITE_API_BASE=https://your-backend.onrender.com
 ## Contributing
 Issues and PRs are welcome. Please include a minimal repro with screenshots/screencasts.
 
-⸻
+---
 
-🪪 License
+## 🪪 License
 
 © 2025 Tiger — MIT License
 Attribution appreciated, not required.
 
-⸻
+---
 
 
 ## Acknowledgments
