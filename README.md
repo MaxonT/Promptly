@@ -1,5 +1,3 @@
-⸻
-Creator: Ming (Tiger) Yang
 
 ---
 title: "Promptly — Outcome‑First Prompt Engineering"
