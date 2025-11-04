@@ -10,10 +10,10 @@ output:
     df_print: paged
 ---
 
-## What is Promptly?
+## What is Promptly?🧠
 Promptly is a visualization‑first, outcome‑driven prompt engineering workbench. You define the **task spec** and **test cases**; Promptly then **searches**, **tests**, and **improves** prompts so model behavior converges toward the **ideal output you define**. It replaces ad‑hoc prompting with **evidence‑backed iteration**.
 
-### Why it matters
+### Why it matters❓
 - **Outcome‑first** — Align generation with your acceptance criteria.  
 - **Evidence over intuition** — KPIs and tests tell you what works.  
 - **Reusable pipeline** — Templated Spec, Tests, KPIs, and Version Evolution.
