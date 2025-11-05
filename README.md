@@ -141,15 +141,16 @@ Issues and PRs are welcome. Please include a minimal repro with screenshots/scre
 
 ## 🪪 License
 
-© 2025 Tiger — Released under the MIT License.  
+© 2025 Tiger Yang— Released under the MIT License.  
 Use, modify, distribute, or remix freely under the same open terms.  
 Attribution is appreciated but not required.  
 
 This project embodies an open-source spirit — designed to inspire,  
 build upon, and evolve through collective creativity.  
 
+---
 
-MIT License
+###MIT License
 
 Copyright (c) 2025 Tiger
 
@@ -172,7 +173,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ---
-
+— Crafted with curiosity and kindness by Tiger.
 
 ## Acknowledgments
 Lucide icons · Inter font · Vercel · Render.
