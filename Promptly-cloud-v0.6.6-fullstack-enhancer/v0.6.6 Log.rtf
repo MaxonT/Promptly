@@ -1,0 +1,570 @@
+{\rtf1\ansi\ansicpg936\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 .SFNS-Regular;\f2\fnil\fcharset0 .SFNS-Semibold;
+\f3\fnil\fcharset0 HelveticaNeue-Bold;\f4\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;\f5\fmodern\fcharset0 Courier-Oblique;
+\f6\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red14\green14\blue14;\red74\green80\blue93;\red155\green162\blue177;
+\red184\green93\blue213;\red136\green185\blue102;}
+{\*\expandedcolortbl;;\cssrgb\c6700\c6700\c6700;\cssrgb\c36078\c38824\c43922;\cssrgb\c67059\c69804\c74902;
+\cssrgb\c77647\c47059\c86667;\cssrgb\c59608\c76471\c47451;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b\fs38 \cf2 \uc0\u55358 \u56830  \u26412 \u27425 \u26356 \u26032  Summary\u65288 \u21487 \u30452 \u25509  copy \u32473 \u26410 \u26469 \u33258 \u24049 \u65289 
+\f1\b0\fs32 \
+\
+\pard\tx860\tx1420\tx1980\tx2540\tx3100\tx3660\tx4220\tx4780\tx5340\tx5900\tx6460\tx7020\li300\sl324\slmult1\partightenfactor0
+
+\f3\b \cf2 Promptly-cloud v0.6.6 \'96 fullstack-enhancer\uc0\u65288 \u20005 \u26684 \u24314 \u31435 \u22312  v0.6.5 \u19978 \u65292 \u21482 \u20570 \u22686 \u37327 \u65292 \u19981 \u30772 \u22351 \u26087 \u36923 \u36753 \u65289 
+\f1\b0 \
+\pard\tqr\tx280\tx440\li440\fi-440\sl324\slmult1\sb240\partightenfactor0
+\cf2 	1.	
+\f3\b \uc0\u21518 \u31471 \u29256 \u26412 \u21495 \u26356 \u26032  & Question Engine \u30495 \u27491 \u25509 \u20837  API
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u23558  
+\f4 backend/package.json
+\f1  \uc0\u29256 \u26412 \u21495 \u20174  
+\f4 0.6.5
+\f1  \uc0\u21319 \u32423 \u20026  
+\f4 0.6.6
+\f1 \uc0\u65292 \u20445 \u25345 \u21407 \u26377 \u20381 \u36182 \u19981 \u21464 \u65288 \u20173 \u21253 \u21547  
+\f4 openai
+\f1 \uc0\u65289 \u12290 \
+	\'95	\uc0\u22312  
+\f4 src/server.js
+\f1  \uc0\u20013 \u25346 \u19978 \u21407 \u26469 \u23601 \u23384 \u22312 \u20294 \u26410 \u25509 \u20837 \u30340 \u36335 \u30001 \u65306 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 app.use("/api/question-sessions", questionSessionRouter);
+\f1 \
+	\'95	
+\f4 app.use("/api/specs", specsRouter);
+\f1 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u23545 \u24212  import\u65306 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 import \{ questionSessionRouter \} from "./routes/questionSessions.js";
+\f1 \
+	\'95	
+\f4 import \{ specsRouter \} from "./routes/specs.js";
+\f1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li1060\sl324\slmult1\pardirnatural\partightenfactor0
+\cf2 \uc0\u8594  \u36825 \u19968 \u27493 \u25226 \u19978 \u19968 \u29256 \u30340  
+\f3\b Question Wizard \uc0\u21069 \u31471 
+\f1\b0  \uc0\u21644 \u21518 \u31471  Question Engine/Spec Compiler \u24443 \u24213 \u25171 \u36890 \u12290 \
+\pard\tqr\tx280\tx440\li440\fi-440\sl324\slmult1\sb240\partightenfactor0
+\cf2 	2.	
+\f3\b \uc0\u26032 \u22686  Prompt Enhancer \u21518 \u31471  lib\u65306 promptEnhancer.js
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u36335 \u24452 \u65306 
+\f4 backend/src/lib/promptEnhancer.js
+\f1 \
+	\'95	\uc0\u22522 \u20110 \u29616 \u26377  
+\f4 openaiClient.chatJson
+\f1  + 
+\f4 zod
+\f1 \uc0\u65292 \u23454 \u29616  5 \u20010 \u26680 \u24515 \u20989 \u25968 \u65306 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 enhanceStructure(\{ prompt \})
+\f1 \uc0\u65306 \u37325 \u20889 \u20026 \u32467 \u26500 \u21270  prompt\u65288 \u35282 \u33394  / \u30446 \u26631  / \u36755 \u20837 \u36755 \u20986  / \u32422 \u26463  /\u27493 \u39588 \u65289 \u65307 \
+	\'95	
+\f4 enhanceStyle(\{ prompt \})
+\f1 \uc0\u65306 \u20445 \u25345 \u20219 \u21153 \u19981 \u21464 \u65292 \u25913 \u20889 \u20026 \u26356 \u31616 \u27905 \u12289 \u26174 \u24335 \u12289 \u35821 \u27668 \u20013 \u24615 \u65307 \
+	\'95	
+\f4 simplifyPrompt(\{ prompt \})
+\f1 \uc0\u65306 \u28040 \u38500 \u20887 \u20313 \u21644 \u27495 \u20041 \u65292 \u20165 \u20445 \u30041 \u28165 \u26224 \u24847 \u22270 \u65307 \
+	\'95	
+\f4 validatePrompt(\{ prompt \})
+\f1 \uc0\u65306 \u36755 \u20986  
+\f4 ok + issues[]
+\f1 \uc0\u65288 level = info/warning/error + hint\u65289 \u65307 \
+	\'95	
+\f4 scorePrompt(\{ prompt \})
+\f1 \uc0\u65306 \u32473 \u20986  0\'9610 \u24635 \u20998 \u12289 \u21487 \u36873 \u32500 \u24230 \u20998 \u65288 clarity/structure/safety/specificity \u31561 \u65289 \u21644 \u25913 \u36827 \u24314 \u35758 \u12290 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u25152 \u26377 \u20989 \u25968 \u20005 \u26684 \u36820 \u22238  JSON\u65292 \u20351 \u29992  
+\f4 zod
+\f1  \uc0\u26657 \u39564 \u65306 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 EnhancedPromptSchema
+\f1  / 
+\f4 ScoredPromptSchema
+\f1  / 
+\f4 ValidationResultSchema
+\f1 \uc0\u12290 \
+\pard\tqr\tx280\tx440\li440\fi-440\sl324\slmult1\sb240\partightenfactor0
+\cf2 	3.	
+\f3\b \uc0\u26032 \u22686  Prompt Enhancer \u21518 \u31471 \u36335 \u30001 \u65306 /api/enhance/*
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u36335 \u24452 \u65306 
+\f4 backend/src/routes/enhancer.js
+\f1 \uc0\u65292 \u23548 \u20986  
+\f4 enhancerRouter
+\f1 \uc0\u12290 \
+	\'95	\uc0\u32479 \u19968 \u22522 \u30784 \u26657 \u39564 \u65306 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 BaseSchema = \{ prompt: string.min(1) \}
+\f1 \uc0\u65292 \u38450 \u27490 \u31354 \u35831 \u27714 \u12290 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u25552 \u20379 \u20197 \u19979  HTTP \u25509 \u21475 \u65288 \u20840 \u37096  POST + JSON\u65289 \u65306 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 POST /api/enhance/structure
+\f1  \uc0\u8594  \u35843  
+\f4 enhanceStructure
+\f1 \uc0\u65307 \
+	\'95	
+\f4 POST /api/enhance/style
+\f1  \uc0\u8594  \u35843  
+\f4 enhanceStyle
+\f1 \uc0\u65307 \
+	\'95	
+\f4 POST /api/enhance/simplify
+\f1  \uc0\u8594  \u35843  
+\f4 simplifyPrompt
+\f1 \uc0\u65307 \
+	\'95	
+\f4 POST /api/enhance/validate
+\f1  \uc0\u8594  \u35843  
+\f4 validatePrompt
+\f1 \uc0\u65307 \
+	\'95	
+\f4 POST /api/enhance/score
+\f1  \uc0\u8594  \u35843  
+\f4 scorePrompt
+\f1 \uc0\u12290 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u32479 \u19968 \u38169 \u35823 \u22788 \u29702 \u36923 \u36753 \u65306 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u33509  
+\f4 OPENAI_API_KEY
+\f1  \uc0\u20026 \u31354 \u23548 \u33268  
+\f4 LlmDisabledError
+\f1  \uc0\u8594  HTTP 503 + 
+\f4 \{ ok:false, error:"LLM_DISABLED" \}
+\f1 \uc0\u65307 \
+	\'95	
+\f4 ZodError
+\f1  \uc0\u8594  HTTP 400 + 
+\f4 \{ ok:false, error:"BAD_REQUEST", details:[...] \}
+\f1 \uc0\u65307 \
+	\'95	\uc0\u20854 \u20182 \u38169 \u35823  \u8594  HTTP 500 + 
+\f4 \{ ok:false, error:"INTERNAL_ERROR" \}
+\f1 \uc0\u12290 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u22312  
+\f4 src/server.js
+\f1  \uc0\u20013 \u26032 \u22686 \u25346 \u36733 \u65306 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 app.use("/api/enhance", enhancerRouter);
+\f1 \
+\pard\tqr\tx280\tx440\li440\fi-440\sl324\slmult1\sb240\partightenfactor0
+\cf2 	4.	
+\f3\b \uc0\u26032 \u22686  Prompt Enhancer \u21069 \u31471 \u39029 \u38754 \u65288 \u23436 \u20840 \u29420 \u31435 \u65292 \u19981 \u25913 \u21407  index / wizard\u65289 
+\f1\b0 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u26032 \u22686 \u25991 \u20214 \u65288 \u20840 \u37096 \u22312  
+\f4 frontend 2/
+\f1  \uc0\u19979 \u65292 \u23436 \u20840 \u22686 \u37327 \u65289 \u65306 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 enhancer.html
+\f1 \uc0\u65306 Prompt Enhancer UI \u39029 \u38754 \u65307 \
+	\'95	
+\f4 enhancer.css
+\f1 \uc0\u65306 \u21482 \u20316 \u29992 \u20110  enhancer \u39029 \u38754 \u30340 \u19968 \u22871 \u26679 \u24335 \u65292 \u20445 \u30041 \u20320 \u21407 \u26412 \u30340 \u21697 \u29260 \u27668 \u36136 \u65307 \
+	\'95	
+\f4 enhancer.js
+\f1 \uc0\u65306 \u19982  
+\f4 /api/enhance/*
+\f1  \uc0\u23545 \u25509 \u30340 \u21069 \u31471 \u36923 \u36753 \u12290 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u20027 \u35201 \u21151 \u33021 \u65306 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u24038 \u20391 \u65306 \u36755 \u20837  raw prompt + \u36873 \u25321 \u27169 \u24335 \u65288 Structure / Style / Simplify\u65289  + \u28857 \u20987  \'93Enhance\'94\u65307 \
+	\'95	\uc0\u21491 \u20391 \u65306 \u23637 \u31034  enhanced prompt\u65292 \u24182 \u25903 \u25345 \u65306 \
+\pard\tqr\tx1300\tx1460\li1460\fi-1460\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u19968 \u38190 \u22797 \u21046 \u21040 \u21098 \u36148 \u26495 \u65307 \
+	\'95	\'93Score quality\'94 \uc0\u8594  \u35843 \u29992  
+\f4 /api/enhance/score
+\f1 \uc0\u65292 \u23637 \u31034 \u24635 \u20998  + \u21508 \u32500 \u24230  + \u24314 \u35758 \u65307 \
+	\'95	\'93Validate\'94 \uc0\u8594  \u35843 \u29992  
+\f4 /api/enhance/validate
+\f1 \uc0\u65292 \u23637 \u31034 \u38382 \u39064 \u21015 \u34920 \u65307 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u24213 \u37096 \u65306 Engine log \u21306 \u22495 \u65292 \u35760 \u24405 \u25152 \u26377  API \u35843 \u29992 \u19982 \u38169 \u35823 \u12290 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u19981 \u20462 \u25913 \u20219 \u20309 \u29616 \u26377  
+\f4 style.css
+\f1 \uc0\u12289 
+\f4 core.js
+\f1 \uc0\u12289 
+\f4 index.html
+\f1 \uc0\u65292 \u20165 \u26032 \u22686 \u25991 \u20214 \u21644 \u29420 \u31435 \u39029 \u38754 \u20837 \u21475 \u12290 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\uc0\u11835 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b\fs38 \cf2 \uc0\u55357 \u56589  \u36825 \u27425 \u20855 \u20307 \u20570 \u20102 \u21738 \u20123 \u12300 \u32454 \u33410 \u24037 \u31243 \u12301 
+\f1\b0\fs32 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b\fs34 \cf2 1. \uc0\u25226  Question Engine \u30495 \u27491 \'93\u25509 \'94\u21040 \u21518 \u31471  API
+\f1\b0\fs32 \
+\
+\uc0\u20043 \u21069 \u30340  v0.6.5 \u26159 \u36825 \u26679 \u30340 \u29366 \u24577 \u65306 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u24050 \u32463 \u26377 \u65306 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 src/lib/openaiClient.js
+\f1 \uc0\u65288 \u23553 \u35013  chatJson\u65289 \u65307 \
+	\'95	
+\f4 src/lib/llmAgents.js
+\f1 \uc0\u65288 \u29983 \u25104 \u22823 \u38382 \u39064 \u12289 \u23567 \u38382 \u39064 \u12289 raw spec\u65289 \u65307 \
+	\'95	
+\f4 src/lib/specCompiler.js
+\f1 \uc0\u65288 Spec \u8594  prompt blocks\u65289 \u65307 \
+	\'95	
+\f4 src/routes/questionSessions.js
+\f1  / 
+\f4 src/routes/specs.js
+\f1 \uc0\u12290 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u20294  
+\f4 src/server.js
+\f1  \uc0\u27809 \u26377  
+\f4 app.use("/api/question-sessions"...
+\f1  / 
+\f4 app.use("/api/specs"...
+\f1 \uc0\u12290 \
+\
+\uc0\u36825 \u27425 \u25105 \u22312  
+\f3\b \uc0\u19981 \u21160 \u20854 \u23427 \u36923 \u36753 
+\f1\b0  \uc0\u30340 \u21069 \u25552 \u19979 \u65292 \u20570 \u20102 \u20004 \u22788 \u31934 \u30830 \u25554 \u20837 \u65306 
+\f0\fs24 \cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f5\i\fs28 \cf3 // \uc0\u39030 \u37096  import \u21306 
+\f6\i0 \cf4 \
+\cf5 import\cf4  \{ authRouter \} \cf5 from\cf4  \cf6 "./routes/auth.js"\cf4 ;\
+\cf5 import\cf4  \{ docRouter \} \cf5 from\cf4  \cf6 "./routes/doc.js"\cf4 ;\
+\cf5 import\cf4  \{ shareRouter \} \cf5 from\cf4  \cf6 "./routes/share.js"\cf4 ;\
+\cf5 import\cf4  \{ questionSessionRouter \} \cf5 from\cf4  \cf6 "./routes/questionSessions.js"\cf4 ;\
+\cf5 import\cf4  \{ specsRouter \} \cf5 from\cf4  \cf6 "./routes/specs.js"\cf4 ;
+\f0\fs24 \cf0 \
+\
+
+\f5\i\fs28 \cf3 // \uc0\u36335 \u30001 \u25346 \u36733 \u21306 
+\f6\i0 \cf4 \
+app.use(\cf6 "/api/auth"\cf4 , authRouter);\
+app.use(\cf6 "/api/docs"\cf4 , docRouter);\
+app.use(\cf6 "/api/share"\cf4 , shareRouter);\
+app.use(\cf6 "/api/question-sessions"\cf4 , questionSessionRouter);\
+app.use(\cf6 "/api/specs"\cf4 , specsRouter);\
+app.use(\cf6 "/api/enhance"\cf4 , enhancerRouter); 
+\f5\i \cf3 // \uc0\u8592  \u26032 \u22686 \u30340  enhancer \u36335 \u30001 \u25346 \u36733 
+\f0\i0\fs24 \cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf2 \uc0\u36825 \u26679 \u20320 \u24403 \u21069 \u30340  
+\f4 wizard.html
+\f1  \uc0\u8594  
+\f4 wizard.js
+\f1  \uc0\u21483 \u30340  
+\f4 /api/question-sessions
+\f1  & 
+\f4 /api/specs
+\f1  \uc0\u20250 \u30495 \u27491 \u36305 \u36890 \u12290 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\uc0\u11835 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b\fs34 \cf2 2. Prompt Enhancer \uc0\u21518 \u31471 \u65306 promptEnhancer.js + enhancer.js
+\f1\b0\fs32 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f3\b \cf2 lib\uc0\u65306 backend/src/lib/promptEnhancer.js
+\f1\b0 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u29992 \u29616 \u26377  
+\f4 chatJson(\{ system, user \})
+\f1  \uc0\u32534 \u20889  5 \u20010 \u39640 \u20869 \u32858 \u20989 \u25968 \u65306 
+\f0\fs24 \cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f6\fs28 \cf5 export\cf4  \cf5 async\cf4  \cf5 function\cf4  enhanceStructure(\{ prompt \}) \{ ... \}\
+\cf5 export\cf4  \cf5 async\cf4  \cf5 function\cf4  enhanceStyle(\{ prompt \}) \{ ... \}\
+\cf5 export\cf4  \cf5 async\cf4  \cf5 function\cf4  simplifyPrompt(\{ prompt \}) \{ ... \}\
+\cf5 export\cf4  \cf5 async\cf4  \cf5 function\cf4  validatePrompt(\{ prompt \}) \{ ... \}\
+\cf5 export\cf4  \cf5 async\cf4  \cf5 function\cf4  scorePrompt(\{ prompt \}) \{ ... \}
+\f0\fs24 \cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf2 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u27599 \u20010 \u20989 \u25968 \u65306 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 system
+\f1  \uc0\u37324 \u20005 \u26684 \u25551 \u36848 \u35282 \u33394  & \u36755 \u20986 \u26684 \u24335 \u65307 \
+	\'95	
+\f4 user
+\f1  \uc0\u29992  JSON \u21253 \u35013 \u65306 
+\f4 \{ prompt, mode: "..." \}
+\f1 \uc0\u65307 \
+	\'95	\uc0\u35843 \u29992  
+\f4 chatJson
+\f1 \uc0\u65292 \u28982 \u21518 \u29992 \u23545 \u24212 \u30340  
+\f4 zod
+\f1  Schema parse\uc0\u12290 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f3\b \cf2 router\uc0\u65306 backend/src/routes/enhancer.js
+\f1\b0 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u23450 \u20041  
+\f4 enhancerRouter
+\f1 \uc0\u65292 \u25346 \u36733  5 \u26465  POST \u36335 \u30001 \u65306 
+\f0\fs24 \cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f6\fs28 \cf4 enhancerRouter.post(\cf6 "/structure"\cf4 , ...)\
+enhancerRouter.post(\cf6 "/style"\cf4 , ...)\
+enhancerRouter.post(\cf6 "/simplify"\cf4 , ...)\
+enhancerRouter.post(\cf6 "/validate"\cf4 , ...)\
+enhancerRouter.post(\cf6 "/score"\cf4 , ...)
+\f0\fs24 \cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf2 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u23545 \u32467 \u26500 \u21270 \u22686 \u24378  / \u39118 \u26684 \u22686 \u24378  / \u31616 \u21270  / \u25171 \u20998 \u65292 \u20351 \u29992 \u32479 \u19968  
+\f4 handleEnhance
+\f1 \uc0\u65306 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u35299 \u26512  
+\f4 prompt
+\f1 \uc0\u65307 \
+	\'95	\uc0\u35843 \u29992 \u23545 \u24212  lib \u20989 \u25968 \u65307 \
+	\'95	\uc0\u21253 \u19968 \u23618  
+\f4 \{ ok: true, result \}
+\f1 \uc0\u12290 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u23545  
+\f4 validate
+\f1  \uc0\u21333 \u29420 \u22788 \u29702 \u65292 \u26041 \u20415 \u20197 \u21518 \u25193 \u23637 \u26356 \u22810 \u23383 \u27573 \u12290 \
+\
+\pard\tx860\tx1420\tx1980\tx2540\tx3100\tx3660\tx4220\tx4780\tx5340\tx5900\tx6460\tx7020\li300\sl324\slmult1\partightenfactor0
+\cf2 \uc0\u36825 \u19968 \u27493 \u26159  Promptly \u12300 prompt \u20248 \u21270 \u20840 \u23478 \u26742 \u12301 \u30340 \u30495 \u27491 \u21518 \u31471 \u22522 \u24213 \u65292 \u21518 \u38754 \u20320 \u35201 \u20570  Outcome-first \u23545 \u40784  / Best-of-N \u26102 \u20063 \u21487 \u20197 \u30452 \u25509 \u22797 \u29992  score/validate\u12290 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\uc0\u11835 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b\fs34 \cf2 3. Prompt Enhancer \uc0\u21069 \u31471 \u65306 enhancer.html / enhancer.css / enhancer.js
+\f1\b0\fs32 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f3\b \cf2 \uc0\u39029 \u38754 \u32467 \u26500 \u65288 enhancer.html\u65289 \u65306 
+\f1\b0 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	Header\uc0\u65306 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u24038 \u20391 \u65306 Logo + \'93Promptly Prompt Enhancer\'94 + subtitle\u65307 \
+	\'95	\uc0\u21491 \u20391 \u65306 badge 
+\f4 v0.6.6 \'b7 Enhancer beta
+\f1 \uc0\u12290 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u20027 \u20307 \u19977 \u22359 \u65306 \
+\pard\tqr\tx680\tx840\li840\fi-840\sl324\slmult1\sb240\partightenfactor0
+\cf2 	1.	
+\f3\b Raw Prompt \uc0\u36755 \u20837 \u38754 \u26495 
+\f1\b0 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 textarea#rawPrompt
+\f1 \uc0\u65306 \u20219 \u24847 \u31896 \u36148 \u24403 \u21069 \u29992 \u30340  Prompt\u65307 \
+	\'95	
+\f4 select#modeSelect
+\f1 \uc0\u65306 \
+\pard\tqr\tx1300\tx1460\li1460\fi-1460\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	Structure first / Style & tone / Simplify\uc0\u65307 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 button#runEnhanceBtn
+\f1 \uc0\u65306 \u35843 \u29992  
+\f4 /api/enhance/structure|style|simplify
+\f1 \uc0\u12290 \
+\pard\tqr\tx680\tx840\li840\fi-840\sl324\slmult1\sb240\partightenfactor0
+\cf2 	2.	
+\f3\b Enhanced Prompt \uc0\u36755 \u20986 \u38754 \u26495 
+\f1\b0 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 pre#enhancedPrompt
+\f1 \uc0\u65306 \u26174 \u31034 \u24378 \u21270 \u21518 \u30340  Prompt\u65307 \
+	\'95	\uc0\u19977 \u20010 \u25805 \u20316 \u25353 \u38062 \u65306 \
+\pard\tqr\tx1300\tx1460\li1460\fi-1460\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 Copy enhanced prompt
+\f1  \uc0\u8594  \u22797 \u21046 \u21040 \u21098 \u36148 \u26495 \u65307 \
+	\'95	
+\f4 Score quality
+\f1  \uc0\u8594  \u35843  
+\f4 /api/enhance/score
+\f1 \uc0\u65292 \u23637 \u31034 \u24635 \u20998  + \u21508 \u32500 \u24230  +\u24314 \u35758 \u65307 \
+	\'95	
+\f4 Validate
+\f1  \uc0\u8594  \u35843  
+\f4 /api/enhance/validate
+\f1 \uc0\u65292 \u23637 \u31034 \u38382 \u39064 \u21015 \u34920 \u12290 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 #scoreResult
+\f1  / 
+\f4 #validationResult
+\f1 \uc0\u65306 \u32467 \u26524 \u21306 \u22495 \u12290 \
+\pard\tqr\tx680\tx840\li840\fi-840\sl324\slmult1\sb240\partightenfactor0
+\cf2 	3.	
+\f3\b Engine log
+\f1\b0 \
+\pard\tqr\tx900\tx1060\li1060\fi-1060\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 pre#enhancerLog
+\f1 \uc0\u65306 \u25152 \u26377 \u35831 \u27714  / \u38169 \u35823 \u19968 \u30446 \u20102 \u28982 \u65292 \u26041 \u20415 \u20320  debug\u12290 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f3\b \cf2 \uc0\u36923 \u36753 \u65288 enhancer.js\u65289 \u65306 
+\f1\b0 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 callEnhancer(path)
+\f1 \uc0\u65306 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u33258 \u21160 \u25226  textarea \u37324 \u30340  prompt \u21457 \u21040  
+\f4 /api/enhance$\{path\}
+\f1 \uc0\u65307 \
+	\'95	\uc0\u26681 \u25454  
+\f4 data.ok
+\f1  \uc0\u21028 \u26029 \u25104 \u21151 \u25110 \u22833 \u36133 \u65307 \
+	\'95	\uc0\u25226 \u29366 \u24577 \u20889 \u20837  log\u12290 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 onRunEnhance()
+\f1 \uc0\u65306 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u26681 \u25454  mode \u36873 \u25321  
+\f4 /structure
+\f1  / 
+\f4 /style
+\f1  / 
+\f4 /simplify
+\f1 \uc0\u65307 \
+	\'95	\uc0\u25226 \u36820 \u22238 \u30340  
+\f4 result.enhanced
+\f1  \uc0\u20889 \u20837  
+\f4 enhancedPromptEl.textContent
+\f1 \uc0\u12290 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 onRunScore()
+\f1 \uc0\u65306 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u20248 \u20808 \u23545  enhanced prompt \u35780 \u20998 \u65307 \u33509 \u20026 \u31354 \u21017 \u36864 \u22238  raw prompt\u65307 \
+	\'95	\uc0\u23637 \u31034  
+\f4 score
+\f1 \uc0\u12289 
+\f4 dimensions
+\f1 \uc0\u65288 \u25353 \u34892 \u65289 \u12289 
+\f4 suggestions
+\f1 \uc0\u12290 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 onRunValidate()
+\f1 \uc0\u65306 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u21516 \u26679 \u20248 \u20808 \u20351 \u29992  enhanced prompt\u65307 \
+	\'95	\uc0\u23637 \u31034 \u27599 \u26465  issues\u65292 \u21069 \u38754 \u24102  
+\f4 [!]
+\f1  / 
+\f4 [~]
+\f1  / 
+\f4 [i]
+\f1  \uc0\u23545 \u24212  error/warning/info\u12290 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	
+\f4 onCopyEnhanced()
+\f1 \uc0\u65306 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u20351 \u29992  
+\f4 navigator.clipboard.writeText
+\f1 \uc0\u65292 \u25104 \u21151 \u19982 \u21542 \u37117 \u20889 \u20837  log\u12290 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\uc0\u11835 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f2\b\fs38 \cf2 \uc0\u55357 \u56622  \u29616 \u22312 \u25972 \u20307 \u29366 \u24577 \u22238 \u39038 \u65288 v0.6.6\u65289 
+\f1\b0\fs32 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u9989  \u24050 \u26377 \u65306 \
+\pard\tqr\tx500\tx660\li660\fi-660\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	Docs \uc0\u32534 \u36753  & Share \u20840 \u38142 \u36335 \u65288 v0.6.4 \u22522 \u30784 \u65289 \
+	\'95	Question Engine + Spec Compiler + DB schema\uc0\u65288 \u21518 \u31471 \u65289 \
+	\'95	Question Wizard \uc0\u21069 \u31471  \u8594  \u21487 \u20197 \u20174  idea \u36208 \u21040  spec + prompt\
+	\'95	Prompt Enhancer \uc0\u21518 \u31471 \u65288 \u32467 \u26500 /\u39118 \u26684 /\u31616 \u21270 /\u39564 \u35777 /\u35780 \u20998 \u65289 \
+	\'95	Prompt Enhancer \uc0\u21069 \u31471 \u39029 \u38754 \u65288 enhancer.html\u65289 \
+\pard\tqr\tx100\tx260\li260\fi-260\sl324\slmult1\sb240\partightenfactor0
+\cf2 	\'95	\uc0\u9203  \u26410 \u20570  & \u38656 \u35201 \u25509 \u19979 \u26469  2\'963 \u27425 \u36319 \u36827 \u30340 \u65306 \
+\pard\tqr\tx680\tx840\li840\fi-840\sl324\slmult1\sb240\partightenfactor0
+\cf2 	1.	Best-of-N generation + Score + Argmax\uc0\u65288 \u30495 \u27491 \u30340  Outcome-first pipeline\u65289 \
+	2.	Specs / Prompt \uc0\u36164 \u20135 \u31649 \u29702  UI\u65288 \u21015 \u34920 \u12289 \u35814 \u24773 \u12289 \u29256 \u26412 \u12289 diff\u65289 \
+	3.	Settings & \uc0\u27169 \u22411 \u31649 \u29702  UI\u65288 \u27169 \u22411 \u36873 \u25321 \u12289 \u22810 \u35821 \u35328 \u27169 \u24335 \u12289 \u20225 \u19994 \u37197 \u32622 \u39044 \u30041 \u65289 \
+	4.	openapi.yaml + README \uc0\u23545 \u40784 \u21040 \u29616 \u22312 \u30340 \u30495 \u23454 \u33021 \u21147 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+}

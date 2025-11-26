@@ -7,6 +7,8 @@ import { db } from "./lib/db.js";
 import { authRouter } from "./routes/auth.js";
 import { docRouter } from "./routes/doc.js";
 import { shareRouter } from "./routes/share.js";
+import { questionSessionRouter } from "./routes/questionSessions.js";
+import { specsRouter } from "./routes/specs.js";
 
 dotenv.config();
 const app = express();
@@ -24,6 +26,8 @@ app.get("/api/health", (req, res) => {
 app.use("/api/auth", authRouter);
 app.use("/api/docs", docRouter);
 app.use("/api/share", shareRouter);
+app.use("/api/question-sessions", questionSessionRouter);
+app.use("/api/specs", specsRouter);
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
