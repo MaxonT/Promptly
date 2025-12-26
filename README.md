@@ -1,5 +1,4 @@
 ---
-
 title: "Promptly — Outcome‑First Prompt Engineering"
 author: "Promptly Contributors"
 output:
